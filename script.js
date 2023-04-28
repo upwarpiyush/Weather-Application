@@ -9,7 +9,6 @@ const userInfoContainer = document.querySelector(".user-info-container");
 
 
 let oldTab = userTab;
-// const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
 const API_KEY = "0d7790da0d8ab8d978d7ba321801879c";
 oldTab.classList.add("current-tab");
 getfromSessionStorage();
@@ -76,7 +75,6 @@ async function fetchUserWeatherInfo(coordinates){
     }
     catch{
         loadingScreen.classList.remove("active");
-        //handel error
     }
 };
 
@@ -106,9 +104,6 @@ function renderWeatherInfo(weatherInfo)
 function getLocation(){
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
-    }
-    else {
-        //HW - show an alert for no gelolocation support available
     }
 };
 
